@@ -26,13 +26,8 @@ jobs:
         run: |
           pyinstaller 产品表现ASIN查询_mac.spec
 
-      - name: Zip .app for upload
-        run: |
-          cd code/dist
-          zip -r -9 产品表现ASIN查询-macOS.zip 产品表现ASIN查询.app
-
       - name: Upload .app artifact
         uses: actions/upload-artifact@v4
         with:
           name: 产品表现ASIN查询-macOS
-          path: code/dist/产品表现ASIN查询-macOS.zip
+          path: code/dist/产品表现ASIN查询.app
